@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Talent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Upload Your Talent</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="showcase.html">Showcase</a>
+    </nav>
+  </header>
+  <main>
+    <form id="uploadForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="file">Upload File:</label>
+      <input type="file" id="file" name="file" required>
+
+      <button type="submit">Upload</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

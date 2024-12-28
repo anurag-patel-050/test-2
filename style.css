@@ -1,0 +1,176 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* Header Styles */
+header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.college-name {
+  font-size: 1.2em;
+  color: #00d1b2;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 2px solid #fff;
+}
+
+nav .logo {
+  width: 50px;
+  height: auto;
+  margin-left: 20px;
+}
+
+nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d1b2;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  margin-top: 20px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #00d1b2;
+}
+
+/* Main Section */
+main {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.intro button {
+  background-color: #00d1b2;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.intro button:hover {
+  background-color: #00b89c;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .intro h2 {
+    font-size: 2.2em;
+  }
+
+  .intro p {
+    font-size: 1.1em;
+  }
+
+  .intro button {
+    font-size: 1.1em;
+  }
+}
