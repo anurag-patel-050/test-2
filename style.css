@@ -6,38 +6,39 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 16px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
-
 
 /* Header Styles */
 header {
   background-color: #4caf50;
-  color: #fff;
-  padding: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 25px 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
-}
-
-.header-content {
+  z-index: 100;
   text-align: center;
-  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 header h1 {
   font-size: 2.8em;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .college-name {
   font-size: 1.2em;
   color: #00d1b2;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 /* Navigation Styles */
@@ -45,14 +46,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-top: 2px solid #fff;
+  padding: 15px 20px;
+  background-color: #212529;
+  border-top: 3px solid #fff;
+  transition: all 0.3s ease;
 }
 
 nav .logo {
   width: 50px;
   height: auto;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 nav .nav-links {
@@ -65,42 +68,65 @@ nav a {
   font-size: 1.1em;
   margin: 0 15px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  color: #00d1b2;
+  background-color: #00d1b2;
+  transform: scale(1.1);
+  color: #fff;
 }
 
 /* Carousel Styles */
 .carousel-container {
   margin-top: 20px;
+  position: relative;
 }
 
 .carousel-item img {
   object-fit: cover;
-  height: 400px;
+  height: 500px;
   width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-item img:hover {
+  transform: scale(1.05); /* Add hover zoom effect */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-color: #00d1b2;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #00b89c;
 }
 
 /* Main Section */
 main {
   background-color: #fff;
-  padding: 50px 0;
+  padding: 70px 20px;
+  text-align: center;
 }
 
 .intro {
-  text-align: center;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .intro h2 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   margin-bottom: 20px;
   color: #333;
 }
@@ -109,21 +135,28 @@ main {
   font-size: 1.2em;
   margin-bottom: 30px;
   color: #555;
+  line-height: 1.8;
 }
 
 .intro button {
   background-color: #00d1b2;
-  color: #fff;
+  color: white;
   padding: 15px 30px;
   border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
+  border-radius: 30px;
+  font-size: 1.3em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .intro button:hover {
   background-color: #00b89c;
+  transform: translateY(-3px);
+}
+
+.intro button:active {
+  transform: translateY(1px);
 }
 
 /* Footer Styles */
@@ -132,16 +165,45 @@ footer {
   padding: 20px;
   background-color: #333;
   color: #fff;
+  margin-top: 30px;
+  font-size: 1em;
 }
 
 footer p {
   margin: 10px 0;
 }
 
+/* Sliding Message */
+.sliding-message {
+  position: relative;
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  animation: slide 15s linear infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sliding-message p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   nav {
@@ -163,7 +225,7 @@ footer p {
   }
 
   .intro h2 {
-    font-size: 2.2em;
+    font-size: 2.4em;
   }
 
   .intro p {
@@ -172,5 +234,31 @@ footer p {
 
   .intro button {
     font-size: 1.1em;
+  }
+
+  .carousel-item img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.3em;
+  }
+
+  .intro h2 {
+    font-size: 2.2em;
+  }
+
+  .intro p {
+    font-size: 1.0em;
+  }
+
+  .intro button {
+    font-size: 1.0em;
+  }
+
+  .carousel-item img {
+    height: 300px;
   }
 }
